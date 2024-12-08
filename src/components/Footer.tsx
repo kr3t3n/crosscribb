@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="w-full py-4 px-4 mt-auto bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+    <footer className="w-full py-4 px-4 bg-white dark:bg-gray-800 border-t dark:border-gray-700">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 text-center sm:text-left">
           © {new Date().getFullYear()} Mangia Studios Limited. All rights reserved.

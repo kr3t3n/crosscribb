@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GameSetup } from '../components/GameSetup';
 import { ScoreBoard } from '../components/ScoreBoard';
 import { RoundScoring } from '../components/RoundScoring';
@@ -10,7 +10,7 @@ import { WINNING_SCORE, isGameOver, calculateRoundTotal } from '../utils/scoring
 import { Trophy, Users2, Calculator, History } from 'lucide-react';
 
 export function GamePage() {
-  const [gameState, setGameState] = React.useState<GameState | null>(null);
+  const [gameState, setGameState] = useState<GameState | null>(null);
 
   const handleStartGame = (mode: GameMode, players: string[], isTeamGame: boolean) => {
     const teams: Team[] = isTeamGame
@@ -113,21 +113,12 @@ export function GamePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="flex-grow container mx-auto px-4 py-8">
+      <div className="flex-1 container mx-auto px-4 py-8">
         {!gameState ? (
           <div className="flex flex-col items-center">
             <GameSetup onStartGame={handleStartGame} />
             
             <div className="mt-12 max-w-3xl mx-auto">
-              <div className="text-center mb-8">
-                <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent">
-                  CrossCribb.Click
-                </h1>
-                <h2 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
-                  Your Ultimate Cribbage Score Tracking Companion
-                </h2>
-              </div>
-
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
                   <Users2 className="w-10 h-10 text-primary-600 dark:text-primary-400 mx-auto mb-4" />
@@ -159,6 +150,19 @@ export function GamePage() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[rgb(71,71,255)] to-[rgb(255,85,221)] bg-clip-text text-transparent">
+                CrossCribb.Click
+              </h1>
+              <h2 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                Your Ultimate Cribbage Score Tracking Companion
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                The perfect scoring companion for both traditional Cribbage and Cross-Crib games. 
+                Designed for casual players and serious enthusiasts alike.
+              </p>
             </div>
           </div>
         ) : (

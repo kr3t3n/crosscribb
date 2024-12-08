@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer';
 export function LandingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="flex-grow container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-900 dark:text-indigo-300">
             Welcome to CrossCribb.Click
@@ -51,7 +51,9 @@ export function LandingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <div className="mt-auto">
+        <Footer />
+      </div>
     </div>
   );
 }
