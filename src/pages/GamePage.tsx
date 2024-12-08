@@ -7,7 +7,7 @@ import { GameStats } from '../components/GameStats';
 import { Footer } from '../components/Footer';
 import { GameState, GameMode, Team } from '../types/game';
 import { WINNING_SCORE, isGameOver, calculateRoundTotal } from '../utils/scoring';
-import { Trophy } from 'lucide-react';
+import { Trophy, Users2, Calculator, History } from 'lucide-react';
 
 export function GamePage() {
   const [gameState, setGameState] = React.useState<GameState | null>(null);
@@ -114,16 +114,52 @@ export function GamePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
       <div className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-2 text-indigo-900 dark:text-indigo-300">
-          CrossCribb.Click
-        </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-          {gameState?.mode === 'crosscrib' ? 'Cross-Crib' : 'Cribbage'} Score Tracker
-        </p>
-
         {!gameState ? (
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col items-center">
             <GameSetup onStartGame={handleStartGame} />
+            
+            <div className="mt-12 max-w-3xl mx-auto">
+              <div className="text-center mb-8">
+                <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-secondary-500 bg-clip-text text-transparent">
+                  CrossCribb.Click
+                </h1>
+                <h2 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                  Your Ultimate Cribbage Score Tracking Companion
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                  <Users2 className="w-10 h-10 text-primary-600 dark:text-primary-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                    Flexible Player Options
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Perfect for 2 players or 2 teams of 2 players each
+                  </p>
+                </div>
+
+                <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                  <Calculator className="w-10 h-10 text-secondary-500 dark:text-secondary-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                    Smart Scoring System
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Supports both traditional Cribbage and Cross-Crib scoring
+                  </p>
+                </div>
+
+                <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                  <History className="w-10 h-10 text-accent dark:text-accent mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                    Complete Game History
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Track rounds, statistics, and performance trends
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="space-y-6 max-w-4xl mx-auto">

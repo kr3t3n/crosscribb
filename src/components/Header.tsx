@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <>
-      <header className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+      <header className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo and App Name */}
@@ -36,9 +36,9 @@ export function Header() {
               <img
                 src="/images/logo.svg"
                 alt="CrossCribb.Click"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
-              <span className="text-lg font-semibold text-primary-700 dark:text-accent">
+              <span className="text-base font-semibold text-primary-700 dark:text-accent">
                 Cribbage Score Keeper
               </span>
             </Link>
@@ -55,28 +55,16 @@ export function Header() {
               <ThemeToggle />
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Navigation */}
             <div className="sm:hidden flex items-center gap-2">
               <Link
                 to="/game"
-                className="flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors"
+                className="flex items-center p-2 rounded-md text-sm font-medium bg-primary-600 text-white hover:bg-primary-700 transition-colors"
+                aria-label="Play Now"
               >
-                Play Now
+                <PlayCircle className="w-5 h-5" />
               </Link>
               <ThemeToggle />
-              <button
-                type="button"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-primary-700 dark:text-accent hover:bg-gray-100 dark:hover:bg-gray-700"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-                {isMenuOpen ? (
-                  <X className="block h-6 w-6" />
-                ) : (
-                  <Menu className="block h-6 w-6" />
-                )}
-              </button>
             </div>
           </div>
         </nav>
