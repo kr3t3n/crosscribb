@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -8,11 +9,22 @@ export function Footer() {
           © {new Date().getFullYear()} Mangia Studios Limited. All rights reserved.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/terms" className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              Terms
+            </Link>
+            <Link to="/privacy" className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              Privacy
+            </Link>
+            <Link to="/contact" className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              Contact
+            </Link>
+          </div>
           <a 
             href="https://www.buymeacoffee.com/georgipep"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+            className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
           >
             Like CrossCribb? Show your love with a ☕
           </a>
@@ -22,7 +34,7 @@ export function Footer() {
               href="https://x.com/georgipep" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-primary-600 dark:text-primary-400 hover:underline"
             >
               Georgi
             </a>

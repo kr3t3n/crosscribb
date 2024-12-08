@@ -6,113 +6,57 @@ A modern, responsive web application for scoring Cribbage and Cross-Crib games. 
 
 CrossCribb.Click is a specialized scoring companion designed to enhance the gaming experience for both traditional Cribbage and Cross-Crib variants. It features a clean, intuitive interface that works seamlessly across desktop and mobile devices.
 
-## Features
+## Key Features
 
 ### Game Modes
-- **Traditional Cribbage** (121 points to win)
-- **Cross-Crib** (61 points to win)
+- Traditional Cribbage (121 points to win)
+- Cross-Crib (61 points to win)
   - Unique scoring system where only the difference between team scores counts as points
 
 ### Player Options
-- **Two-Player Mode**: Individual scoring for head-to-head games
-- **Team Mode**: Support for two teams with two players each
+- Two-Player Mode: Individual scoring for head-to-head games
+- Team Mode: Support for two teams with two players each
 
-### Scoring Interface
-- Real-time score tracking
-- Round-by-round score entry
-- Clear dealer indication
-- Progressive score visualization
-- Input validation and verification
-
-### Statistics and Analytics
-- Average score per round
-- Highest round score tracking
-- Recent performance trends
-- Winning pace indicators
-- Game duration tracking
-
-### Game History
-- Complete round-by-round history
-- Score breakdown for each round
-- Dealer rotation tracking
-- Timestamp for each round
-
-### User Experience
+### Core Features
+- Real-time score tracking with progressive visualization
+- Round-by-round score entry with validation
+- Clear dealer indication and rotation
+- Game statistics and analytics
+- Complete round history
 - Dark/Light theme toggle
-- Responsive design for all screen sizes
-- Touch-friendly interface
-- Progressive Web App (PWA) support
-- Offline functionality
-- Automatic state persistence
+- Responsive design for all devices
+- PWA support for offline functionality
 
-## Technical Stack
+## Technical Implementation
 
-### Frontend
-- React 18
-- TypeScript
-- Tailwind CSS
-- Vite build system
+### Frontend Stack
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Vite for build system
+- Lucide React for icons
 
-### UI Components
-- Lucide React icons
-- Custom responsive components
-- Theme-aware design system
-
-### State Management
-- React Context API
-- Local Storage persistence
+### Architecture
+- Component-based structure
+- React Context for state management
+- Local Storage for persistence
 - Custom hooks for business logic
 
-## Performance Features
-
+### Performance
 - Optimized bundle size
-- Lazy loading of components
-- Efficient re-rendering strategies
+- Lazy loading
 - Mobile-first responsive design
-- Progressive enhancement
 
-## Accessibility
+## Development
 
-- ARIA labels
-- Keyboard navigation
-- High contrast mode support
-- Screen reader compatibility
-- Responsive text sizing
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers
-- PWA installation support
-- Offline functionality
-
-## Development Practices
-
-- Component-based architecture
-- Type-safe development
-- Modular code structure
-- Utility-first CSS
-- Clean code principles
-
-## Future Enhancements
-
-1. **Game Features**
-   - Game history persistence
-   - Multiple simultaneous games
-   - Custom winning score options
-   - Additional game variants
-
-2. **Social Features**
-   - Player profiles
-   - Game statistics export
-   - Share game results
-   - Tournament mode
-
-3. **Technical Improvements**
-   - Backend integration
-   - User authentication
-   - Cloud synchronization
-   - Advanced analytics
+### Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Build for production: `npm run build`
 
 ## Contributing
 

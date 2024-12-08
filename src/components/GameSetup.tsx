@@ -17,7 +17,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStartGame }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-md bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit} className="w-full max-w-md bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Game Setup</h2>
         
@@ -68,7 +68,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStartGame }) => {
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors mt-6"
       >
         Start Game
       </button>

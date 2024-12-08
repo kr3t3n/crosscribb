@@ -8,8 +8,6 @@
 
 > The ultimate scoring companion for Cribbage and Cross-Crib games
 
-![CrossCribb.Click Preview](https://images.unsplash.com/photo-1585504198199-20277593b94f?auto=format&fit=crop&w=1200&q=80)
-
 ## 🚀 Quick Start
 
 ```bash
@@ -30,7 +28,7 @@ Visit `http://localhost:5173` to see the app running.
 
 ## 🎯 Features
 
-- **Dual Game Modes**
+- **Multiple Game Modes**
   - Traditional Cribbage (121 points)
   - Cross-Crib (61 points)
 
@@ -52,7 +50,7 @@ Visit `http://localhost:5173` to see the app running.
 
 ## 🛠️ Tech Stack
 
-- **Frontend Framework**: React 18 with TypeScript
+- **Frontend**: React 18 with TypeScript
 - **Styling**: Tailwind CSS
 - **Build Tool**: Vite
 - **Icons**: Lucide React
@@ -65,14 +63,15 @@ Visit `http://localhost:5173` to see the app running.
 ```
 crosscribb/
 ├── src/
-│   ├── components/     # React components
-│   ├── contexts/       # React contexts
-│   ├── types/         # TypeScript types
-│   ├── utils/         # Utility functions
-│   ├── App.tsx        # Main app component
-│   └── main.tsx       # Entry point
-├── public/            # Static assets
-└── package.json       # Dependencies and scripts
+│   ├── components/    # Reusable UI components
+│   ├── contexts/     # React contexts
+│   ├── pages/        # Page components
+│   ├── types/        # TypeScript types
+│   ├── utils/        # Utility functions
+│   ├── App.tsx       # Main app component
+│   └── main.tsx      # Entry point
+├── public/           # Static assets
+└── package.json      # Dependencies and scripts
 ```
 
 ## 🔧 Development
@@ -89,16 +88,6 @@ npm run preview
 
 # Lint code
 npm run lint
-```
-
-## 🧪 Testing
-
-```bash
-# Run tests
-npm run test
-
-# Run tests in watch mode
-npm run test:watch
 ```
 
 ## 📱 PWA Support
